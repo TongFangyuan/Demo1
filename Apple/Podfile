@@ -1,0 +1,21 @@
+
+platform:ios, '8.0'
+
+# github 官方 pod 源
+source 'https://github.com/CocoaPods/Specs.git'
+# 阿里云 pod 源
+# source 'https://github.com/aliyun/aliyun-specs.git'
+
+
+target "Apple" do
+
+    pod 'LKDBHelper', '~> 2.4.4'
+    pod 'FMDB', '~> 2.7.2'
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'RHAddressBook', '~> 1.1.1'
+    pod 'SDWebImage', '~> 3.7.1'
+    pod 'MJRefresh', '3.1.15'
+    pod 'Reachability', '3.2'
+end
+
+
