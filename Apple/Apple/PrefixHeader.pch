@@ -21,6 +21,11 @@
 #import "BaseViewController.h"
 #import "BaseNavigationController.h"
 #import "Application.h"
+#import "BleDef.h"
+
+//////////////////// pods
+#import <LKDBHelper.h>
+
 
 #endif
 

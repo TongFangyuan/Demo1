@@ -28,6 +28,10 @@
 		84AFF0FD2180664D003D2A51 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0FC2180664D003D2A51 /* MainViewController.m */; };
 		84AFF10021806661003D2A51 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0FF21806661003D2A51 /* SettingViewController.m */; };
 		84AFF10321806854003D2A51 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF10121806854003D2A51 /* UIImage+Convert.m */; };
+		84AFF11B21806E5E003D2A51 /* BleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF11421806E5E003D2A51 /* BleTool.m */; };
+		84AFF11C21806E5E003D2A51 /* BleDbTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF11721806E5E003D2A51 /* BleDbTool.m */; };
+		84AFF11D21806E5E003D2A51 /* BleDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF11921806E5E003D2A51 /* BleDevice.m */; };
+		84AFF11E21806E5E003D2A51 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AFF11A21806E5E003D2A51 /* phone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,14 @@
 		84AFF0FF21806661003D2A51 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		84AFF10121806854003D2A51 /* UIImage+Convert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		84AFF10221806854003D2A51 /* UIImage+Convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
+		84AFF11221806E5E003D2A51 /* BleDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDef.h; sourceTree = "<group>"; };
+		84AFF11321806E5E003D2A51 /* BleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleTool.h; sourceTree = "<group>"; };
+		84AFF11421806E5E003D2A51 /* BleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleTool.m; sourceTree = "<group>"; };
+		84AFF11621806E5E003D2A51 /* BleDbTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDbTool.h; sourceTree = "<group>"; };
+		84AFF11721806E5E003D2A51 /* BleDbTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDbTool.m; sourceTree = "<group>"; };
+		84AFF11821806E5E003D2A51 /* BleDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleDevice.h; sourceTree = "<group>"; };
+		84AFF11921806E5E003D2A51 /* BleDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleDevice.m; sourceTree = "<group>"; };
+		84AFF11A21806E5E003D2A51 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +164,7 @@
 		84AFED9121804E0F003D2A51 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84AFF11121806E5E003D2A51 /* BlueTooth */,
 				84AFF0D8218062E1003D2A51 /* MBProgressHUD */,
 			);
 			path = Helpers;
@@ -280,6 +293,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		84AFF11121806E5E003D2A51 /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				84AFF11221806E5E003D2A51 /* BleDef.h */,
+				84AFF11321806E5E003D2A51 /* BleTool.h */,
+				84AFF11421806E5E003D2A51 /* BleTool.m */,
+				84AFF11521806E5E003D2A51 /* Model */,
+				84AFF11A21806E5E003D2A51 /* phone.png */,
+			);
+			name = BlueTooth;
+			path = "../../../../../SVN/iOS项目/蓝牙打印机/trunk/HelloWorld/HelloWord/Helpers/BlueTooth";
+			sourceTree = "<group>";
+		};
+		84AFF11521806E5E003D2A51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84AFF11621806E5E003D2A51 /* BleDbTool.h */,
+				84AFF11721806E5E003D2A51 /* BleDbTool.m */,
+				84AFF11821806E5E003D2A51 /* BleDevice.h */,
+				84AFF11921806E5E003D2A51 /* BleDevice.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D99EF12FDDE64D26BB1C475C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +395,7 @@
 			files = (
 				84AFED8621804DC1003D2A51 /* LaunchScreen.storyboard in Resources */,
 				84AFF0D42180614B003D2A51 /* nav_back@2x.png in Resources */,
+				84AFF11E21806E5E003D2A51 /* phone.png in Resources */,
 				84AFED8321804DC1003D2A51 /* Assets.xcassets in Resources */,
 				84AFED8121804DB9003D2A51 /* Main.storyboard in Resources */,
 			);
@@ -410,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AFF0D72180616D003D2A51 /* MethodHelper.m in Sources */,
+				84AFF11C21806E5E003D2A51 /* BleDbTool.m in Sources */,
 				84AFED7E21804DB9003D2A51 /* ViewController.m in Sources */,
 				84AFF0E7218063CC003D2A51 /* NSDate+Convert.m in Sources */,
 				84AFF0CF21806104003D2A51 /* BaseViewController.m in Sources */,
@@ -420,8 +459,10 @@
 				84AFED7B21804DB9003D2A51 /* AppDelegate.m in Sources */,
 				84AFF10321806854003D2A51 /* UIImage+Convert.m in Sources */,
 				84AFF0EE218064E9003D2A51 /* UIDevice+IdentifierAddition.m in Sources */,
+				84AFF11D21806E5E003D2A51 /* BleDevice.m in Sources */,
 				84AFF0D221806129003D2A51 /* BaseNavigationController.m in Sources */,
 				84AFF0FD2180664D003D2A51 /* MainViewController.m in Sources */,
+				84AFF11B21806E5E003D2A51 /* BleTool.m in Sources */,
 				84AFF0E121806332003D2A51 /* UIViewController+HUD.m in Sources */,
 				84AFF0E021806332003D2A51 /* MBProgressHUD+Add.m in Sources */,
 				84AFF10021806661003D2A51 /* SettingViewController.m in Sources */,
