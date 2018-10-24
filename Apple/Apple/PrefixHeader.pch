@@ -14,6 +14,13 @@
 #ifdef __OBJC__
 
 #import <UIKit/UIKit.h>
+#import "MethodHelper.h"
+#import "MBProgressHUD+Add.h"
+#import "UIViewController+HUD.h"
+#import "ConstantMgr.h"
+#import "BaseViewController.h"
+#import "BaseNavigationController.h"
+#import "Application.h"
 
 #endif
 
