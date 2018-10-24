@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "BleDevice.h"
 
 @interface SettingViewController : BaseViewController
+
+@property (nonatomic,strong)BleDevice *deviceModel;
 
 @end
