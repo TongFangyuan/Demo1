@@ -23,6 +23,10 @@
 - (void) setPreference:(id)ob withName:(NSString *)prefname;
 
 - (NSString *) appVersion;
+- (NSString *) appBuildVersion;
+- (NSString *) appName;
+- (NSString *) appBundleId;
+
 - (NSString *) deviceUniqueId;
 
 - (UIImage *) getImageWithImageName:(NSString *)name;

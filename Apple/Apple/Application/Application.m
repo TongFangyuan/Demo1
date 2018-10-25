@@ -6,7 +6,6 @@
 //  Copyright 2011年 UFTobacco Inc. Ltd. All rights reserved.
 //
 
-#import "UIDevice+IdentifierAddition.h"
 #import "Application.h"
 
 static Application * theApp_;
@@ -26,7 +25,7 @@ static Application * theApp_;
     return self;
 }
 
-#pragma mask 单例最简单的写法
+#pragma mark 单例最简单的写法
 
 + (Application *) theApp {
     if (!theApp_) {
@@ -35,7 +34,7 @@ static Application * theApp_;
     return theApp_;
 }
  
-#pragma mask UserDefaults存取
+#pragma mark UserDefaults存取
 - (id) preferenceWithName:(NSString *)prefname
 {
     return [mUserDefaults objectForKey:prefname];
@@ -47,21 +46,44 @@ static Application * theApp_;
     [mUserDefaults synchronize];
 }
 
-#pragma mask 版本号
+#pragma mark 版本号
 - (NSString *) appVersion {
-    NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
-    NSString *version = [infoDict objectForKey:@"CFBundleShortVersionString"]; //CFBundleShortVersionString
-    if(version.length!=0)
-        return version;
-    return nil;
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    return [infoDic objectForKey:@"CFBundleShortVersionString"];
+}
+#pragma mark 构建版本号
+- (NSString *)appBuildVersion{
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    return [infoDic objectForKey:@"CFBundleVersion"];
+}
+#pragma mark App名称
+- (NSString *)appName{
+    NSDictionary *infoDic = [[NSBundle mainBundle] infoDictionary];
+    return [infoDic objectForKey:@"CFBundleDisplayName"];
+}
+#pragma mark bundleId
+- (NSString *)appBundleId
+{
+    return [[NSBundle mainBundle] bundleIdentifier];
 }
 
-#pragma mask 设备唯一标识符
+#pragma mark 设备唯一标识符
 - (NSString *) deviceUniqueId {
-    return [[UIDevice currentDevice] uniqueDeviceIdentifier];
+    
+    NSString *service = [self appBundleId];
+    NSString * currentDeviceUUIDStr = [SSKeychain passwordForService:service account:@"uuid"];
+    if (currentDeviceUUIDStr == nil || [currentDeviceUUIDStr isEqualToString:@""] || currentDeviceUUIDStr.length<=0)
+    {
+        NSUUID * currentDeviceUUID = [[UIDevice currentDevice] identifierForVendor];
+        currentDeviceUUIDStr = currentDeviceUUID.UUIDString;
+        currentDeviceUUIDStr = [currentDeviceUUIDStr stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        currentDeviceUUIDStr = [currentDeviceUUIDStr lowercaseString];
+        [SSKeychain setPassword: currentDeviceUUIDStr forService:service account:@"uuid"];
+    }
+    return currentDeviceUUIDStr;
 }
 
-#pragma mask 通过图片名获取UIImage
+#pragma mark 通过图片名获取UIImage
 - (UIImage *) getImageWithImageName:(NSString *)name
 {
     //imageNamed 缓存图片，下次使用不再重新加载，适用小图片／少图片，会自动适应@2x；
