@@ -24,6 +24,7 @@
     
     ///// Bygly
     BuglyConfig *config = [[BuglyConfig alloc] init];
+    config.version = [[Application theApp] appVersion];
 #ifdef DEBUG
     config.debugMode = YES;
     config.blockMonitorEnable = YES;
