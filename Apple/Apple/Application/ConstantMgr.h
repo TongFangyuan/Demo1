@@ -111,3 +111,10 @@
 #define NULLString(string) ((![string isKindOfClass:[NSString class]])||[string isEqualToString:@""] || (string == nil) || [string isEqualToString:@""] || [string isKindOfClass:[NSNull class]]||[[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0)
 
 
+/****************************** 第三方申请的资料 ******************************/
+
+#define kBuglyAppID  @"d98a9f78cb"
+#define kBuglyAppKey @"2b7fc95d-d364-4685-a7d9-219c009cf9ae"
+
+
+/****************************** 第三方结束 ******************************/

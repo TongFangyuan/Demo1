@@ -28,7 +28,7 @@
 
 //////////////////// pods
 #import <LKDBHelper.h>
-
+#import <Bugly/Bugly.h>
 
 #endif
 

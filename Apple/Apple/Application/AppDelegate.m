@@ -22,6 +22,8 @@
     self.window.rootViewController = rootCtl;
     [self.window makeKeyAndVisible];
     
+    [Bugly startWithAppId:kBuglyAppID];
+    
     return YES;
 }
 
