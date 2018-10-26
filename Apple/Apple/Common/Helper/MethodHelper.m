@@ -271,28 +271,27 @@
 + (BOOL)isEmail:(NSString *)str
 {
     NSString *email = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,4}";
-    return [self isValidateByRegex:email];
+    return [self isValidateByRegex:email checkStr:str];
 }
 + (BOOL)isPhone:(NSString *)str
 {
     NSString *phone = @"^1+[3578]+\\d{9}";
-    return [self isValidateByRegex:phone];
+    return [self isValidateByRegex:phone checkStr:str];
 }
 + (BOOL)isIDCard:(NSString *)str
 {
     NSString *IDCard = @"^(\\\\d{14}|\\\\d{17})(\\\\d|[xX])$";
-    return [self isValidateByRegex:IDCard];
-
+    return [self isValidateByRegex:IDCard checkStr:str];
 }
 + (BOOL)isPostCode:(NSString *)str
 {
     NSString *post = @"^[0-8]\\\\d{5}(?!\\\\d)$";
-    return [self isValidateByRegex:post];
+    return [self isValidateByRegex:post checkStr:str];
 }
-+ (BOOL)isValidateByRegex:(NSString *)regex {
++ (BOOL)isValidateByRegex:(NSString *)regex checkStr:(NSString *)checkStr
+{
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
-    return [pre evaluateWithObject:self];
+    return [pre evaluateWithObject:checkStr];
 }
-
 
 @end

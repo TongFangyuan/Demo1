@@ -50,15 +50,14 @@
 //////字典转json字符串
 + (NSString*)convertToJSONData:(id)infoDict;
 
-
 #pragma mark - 常用正则表达式
-/* 正则->验证邮箱 */
+/* 验证邮箱 */
 + (BOOL)isEmail:(NSString *)str;
-/* 正则->验证手机号 */
+/* 验证手机号 */
 + (BOOL)isPhone:(NSString *)str;
-/* 正则->验证身份证 */
+/* 验证身份证 */
 + (BOOL)isIDCard:(NSString *)str;
-/* 正则->验证邮政编码 */
+/* 验证邮政编码 */
 + (BOOL)isPostCode:(NSString *)str;
 
 @end
