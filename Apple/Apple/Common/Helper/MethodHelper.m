@@ -267,4 +267,32 @@
 }
 
 
+#pragma mark - 常用正则表达式
++ (BOOL)isEmail:(NSString *)str
+{
+    NSString *email = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,4}";
+    return [self isValidateByRegex:email];
+}
++ (BOOL)isPhone:(NSString *)str
+{
+    NSString *phone = @"^1+[3578]+\\d{9}";
+    return [self isValidateByRegex:phone];
+}
++ (BOOL)isIDCard:(NSString *)str
+{
+    NSString *IDCard = @"^(\\\\d{14}|\\\\d{17})(\\\\d|[xX])$";
+    return [self isValidateByRegex:IDCard];
+
+}
++ (BOOL)isPostCode:(NSString *)str
+{
+    NSString *post = @"^[0-8]\\\\d{5}(?!\\\\d)$";
+    return [self isValidateByRegex:post];
+}
++ (BOOL)isValidateByRegex:(NSString *)regex {
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [pre evaluateWithObject:self];
+}
+
+
 @end
