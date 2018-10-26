@@ -44,9 +44,9 @@ enum BaseViewCtlElements {
 - (void) setNavigationBarCenterView:(UIView *)centerView;
 
 /*
- 根视图按钮事件
+ 返回按钮事件，在 BaseNavigationController 中设置
  */
-- (void) baseButtonEvent:(id)sender;
+- (void) popEvent:(id)sender;
 
 #pragma mark - 空界面提示
 - (void)showEmptyTitle:(NSString *)title detail:(NSString *)detail;

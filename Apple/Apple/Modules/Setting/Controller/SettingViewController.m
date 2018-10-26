@@ -9,7 +9,7 @@
 #import "SettingViewController.h"
 #import "SettingModel.h"
 #import "SettingsCell.h"
-#import "ConnectedDevicesViewController.h"
+#import "ConnectedViewController.h"
 
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
@@ -95,7 +95,7 @@
 - (void)getData
 {
     Application *app = [Application theApp];
-    SettingModel *item1 = [[SettingModel alloc] initWithText:@"打印机连接" detailText:@"未连接" vcCls:ConnectedDevicesViewController.class vcTitle:@"连接设备"];
+    SettingModel *item1 = [[SettingModel alloc] initWithText:@"打印机连接" detailText:@"未连接" vcCls:ConnectedViewController.class vcTitle:@"连接设备"];
     
     SettingModel *item2 = [[SettingModel alloc] initWithText:@"当前版本号" detailText:[app appVersion]];
     item2.accessoryType = UITableViewCellAccessoryNone;

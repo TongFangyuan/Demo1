@@ -39,25 +39,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = kBgColor;
-    
-    /*  解决NavigationBar与UIViewController重叠的问题 */
-    if(IOS7) {
-        self.edgesForExtendedLayout= UIRectEdgeBottom;
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
-    
-    self.navigationController.navigationBar.translucent = YES;
-    
-    //字体颜色
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],
-                                                                      NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:18]
-                                                                      }];
-    self.navigationItem.titleView.tintColor = [UIColor whiteColor];
-    //背景色
-    [self.navigationController.navigationBar setBackgroundImage:[self imageWithUIColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.1] height:kTopHeight] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[self imageWithUIColor:kSepratorColor height:0.5f]];
-    
-    
+
     UIImageView *bgImageView = [[UIImageView alloc]init];
     bgImageView.frame = CGRectMake(0, -kTopHeight, kScreenWidth, kScreenHeight);
     bgImageView.tag = 100;
@@ -67,7 +49,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self customNavigation];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -77,42 +58,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
-#pragma mark - 自定义导航左右按钮
-- (void)customNavigation {
-    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [settingButton setFrame:CGRectMake(0, 0, 38, 38)];
-    [settingButton addTarget:self action:@selector(clickback) forControlEvents:UIControlEventTouchUpInside];
-    [settingButton setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
-    [settingButton setImage:[[UIImage imageNamed:@"nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
-    UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc] initWithCustomView:settingButton];
-    self.navigationItem.leftBarButtonItems = @[searchBtn];
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
-    
-    self.navigationItem.rightBarButtonItems = nil;
-    
-    
-}
-
-- (void)clickback {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (UIImage *)imageWithUIColor:(UIColor *)color height:(CGFloat)height{
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, height); //宽高 1.0只要有值就够了
-    UIGraphicsBeginImageContext(rect.size); //在这个范围内开启一段上下文
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, [color CGColor]);//在这段上下文中获取到颜色UIColor
-    CGContextFillRect(context, rect);//用这个颜色填充这个上下文
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();//从这段上下文中获取Image属性,,,结束
-    UIGraphicsEndImageContext();
-    
-    return image;
-}
-
 
 #pragma mask隐藏tabbar
 
@@ -186,7 +131,8 @@
 
 
 #pragma mark 根视图按钮事件
-- (void) baseButtonEvent:(id)sender {
+- (void) popEvent:(id)sender {
+    NSLog(@"popViewControllerAnimated");
     [self.navigationController popViewControllerAnimated:YES];
 }
 

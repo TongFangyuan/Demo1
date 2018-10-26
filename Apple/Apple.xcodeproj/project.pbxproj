@@ -24,6 +24,8 @@
 		84664F7521816F1500A934EF /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84664F6821816F1500A934EF /* View+MASAdditions.m */; };
 		84664F7621816F1500A934EF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84664F6B21816F1500A934EF /* ViewController+MASAdditions.m */; };
 		84664F792181729E00A934EF /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84664F782181729E00A934EF /* SettingsCell.m */; };
+		848D699A2182F4A700ACF4A2 /* ConnectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D69992182F4A700ACF4A2 /* ConnectedViewController.m */; };
+		848D699E2182F87500ACF4A2 /* TTErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D699D2182F87400ACF4A2 /* TTErrorView.m */; };
 		84AFED7B21804DB9003D2A51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFED7A21804DB9003D2A51 /* AppDelegate.m */; };
 		84AFED7E21804DB9003D2A51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFED7D21804DB9003D2A51 /* ViewController.m */; };
 		84AFED8121804DB9003D2A51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AFED7F21804DB9003D2A51 /* Main.storyboard */; };
@@ -32,7 +34,6 @@
 		84AFED8921804DC1003D2A51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFED8821804DC1003D2A51 /* main.m */; };
 		84AFF0CF21806104003D2A51 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0CE21806104003D2A51 /* BaseViewController.m */; };
 		84AFF0D221806129003D2A51 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0D121806129003D2A51 /* BaseNavigationController.m */; };
-		84AFF0D42180614B003D2A51 /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AFF0D32180614B003D2A51 /* nav_back@2x.png */; };
 		84AFF0D72180616D003D2A51 /* MethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0D62180616D003D2A51 /* MethodHelper.m */; };
 		84AFF0E021806332003D2A51 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0DC21806332003D2A51 /* MBProgressHUD+Add.m */; };
 		84AFF0E121806332003D2A51 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AFF0DE21806332003D2A51 /* UIViewController+HUD.m */; };
@@ -95,6 +96,10 @@
 		84664F6B21816F1500A934EF /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		84664F772181729E00A934EF /* SettingsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
 		84664F782181729E00A934EF /* SettingsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		848D69982182F4A700ACF4A2 /* ConnectedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectedViewController.h; sourceTree = "<group>"; };
+		848D69992182F4A700ACF4A2 /* ConnectedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectedViewController.m; sourceTree = "<group>"; };
+		848D699C2182F87400ACF4A2 /* TTErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTErrorView.h; sourceTree = "<group>"; };
+		848D699D2182F87400ACF4A2 /* TTErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTErrorView.m; sourceTree = "<group>"; };
 		84AFED7621804DB9003D2A51 /* Apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AFED7921804DB9003D2A51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84AFED7A21804DB9003D2A51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,7 +115,6 @@
 		84AFF0CE21806104003D2A51 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		84AFF0D021806129003D2A51 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		84AFF0D121806129003D2A51 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		84AFF0D32180614B003D2A51 /* nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@2x.png"; sourceTree = "<group>"; };
 		84AFF0D52180616D003D2A51 /* MethodHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodHelper.h; sourceTree = "<group>"; };
 		84AFF0D62180616D003D2A51 /* MethodHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodHelper.m; sourceTree = "<group>"; };
 		84AFF0DC21806332003D2A51 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
@@ -217,6 +221,15 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		848D699B2182F86100ACF4A2 /* TTErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				848D699C2182F87400ACF4A2 /* TTErrorView.h */,
+				848D699D2182F87400ACF4A2 /* TTErrorView.m */,
+			);
+			path = TTErrorView;
+			sourceTree = "<group>";
+		};
 		84AFED6D21804DB9003D2A51 = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +292,7 @@
 		84AFED9121804E0F003D2A51 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				848D699B2182F86100ACF4A2 /* TTErrorView */,
 				84590151218191290089C1F6 /* SSKeychain */,
 				84664F5121816F1500A934EF /* Masonry */,
 				84664F4621816B1B00A934EF /* YYModel */,
@@ -318,7 +332,6 @@
 				84AFF0CE21806104003D2A51 /* BaseViewController.m */,
 				84AFF0D021806129003D2A51 /* BaseNavigationController.h */,
 				84AFF0D121806129003D2A51 /* BaseNavigationController.m */,
-				84AFF0D32180614B003D2A51 /* nav_back@2x.png */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -393,6 +406,8 @@
 			children = (
 				84AFF0FE21806661003D2A51 /* SettingViewController.h */,
 				84AFF0FF21806661003D2A51 /* SettingViewController.m */,
+				848D69982182F4A700ACF4A2 /* ConnectedViewController.h */,
+				848D69992182F4A700ACF4A2 /* ConnectedViewController.m */,
 				84AFF14621807338003D2A51 /* ConnectedDevicesViewController.h */,
 				84AFF14521807337003D2A51 /* ConnectedDevicesViewController.m */,
 			);
@@ -525,7 +540,6 @@
 			files = (
 				84AFED8621804DC1003D2A51 /* LaunchScreen.storyboard in Resources */,
 				84AFF15F2180741C003D2A51 /* EquipmentCell.xib in Resources */,
-				84AFF0D42180614B003D2A51 /* nav_back@2x.png in Resources */,
 				84AFF15E2180741C003D2A51 /* NearEquipmentCell.xib in Resources */,
 				84AFF155218073BF003D2A51 /* phone.png in Resources */,
 				84AFED8321804DC1003D2A51 /* Assets.xcassets in Resources */,
@@ -580,6 +594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AFF153218073BF003D2A51 /* BleDbTool.m in Sources */,
+				848D699E2182F87500ACF4A2 /* TTErrorView.m in Sources */,
 				84AFF0D72180616D003D2A51 /* MethodHelper.m in Sources */,
 				84664F792181729E00A934EF /* SettingsCell.m in Sources */,
 				84AFF15B21807413003D2A51 /* EquipmentCell.m in Sources */,
@@ -593,6 +608,7 @@
 				84AFF0E421806364003D2A51 /* MBProgressHUD.m in Sources */,
 				84664F7621816F1500A934EF /* ViewController+MASAdditions.m in Sources */,
 				84664F7421816F1500A934EF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				848D699A2182F4A700ACF4A2 /* ConnectedViewController.m in Sources */,
 				84AFF0EB218064BE003D2A51 /* Application.m in Sources */,
 				84664F7021816F1500A934EF /* MASLayoutConstraint.m in Sources */,
 				84AFF0F121806522003D2A51 /* NSString+MD5Addition.m in Sources */,

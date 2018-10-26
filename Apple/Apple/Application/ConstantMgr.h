@@ -33,6 +33,7 @@
 #define kThemeColor           kColor(0, 132, 215)
 #define kNavBarColor          kColor(0, 132, 215)
 #define kThemeBackgroundColor kColor(242, 242, 242)
+#define kFont(f)              [UIFont systemFontOfSize:f]
 
 #define kCustomColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define kBgColor                                 [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1.0]
@@ -40,6 +41,7 @@
 #define kMainColor                                 [UIColor colorWithRed:0/255.0 green:184/255.0 blue:240/255.0 alpha:1.0]
 #define kWhiteColor                              [UIColor colorWithRed:252/255.0 green:252/255.0 blue:252/255.0 alpha:1.0]
 #define kLightBlackColor                         [UIColor colorWithRed:50/255.0 green:50/255.0 blue:50/255.0 alpha:1.0f]
+#define kBlackColor                              [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1.0f]
 #define kGreenColor                              [UIColor colorWithPatternImage:[UIImage imageNamed:@"green_color"]]
 #define kRedColor                                [UIColor redColor]
 
