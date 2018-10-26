@@ -22,8 +22,14 @@
     self.window.rootViewController = rootCtl;
     [self.window makeKeyAndVisible];
     
-    [Bugly startWithAppId:kBuglyAppID];
-    
+    ///// Bygly
+    BuglyConfig *config = [[BuglyConfig alloc] init];
+#ifdef DEBUG
+    config.debugMode = YES;
+    config.blockMonitorEnable = YES;
+    config.blockMonitorTimeout = 2;
+#endif
+    [Bugly startWithAppId:kBuglyAppID config:config];
     return YES;
 }
 
