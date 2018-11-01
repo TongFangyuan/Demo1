@@ -249,7 +249,7 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
 
-#pragma mark 字典转json字符串
+#pragma mark - 字典转json字符串
 + (NSString*)convertToJSONData:(id)infoDict {
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:infoDict
@@ -266,6 +266,23 @@
     return jsonString;
 }
 
++ (NSDictionary *)convertToDict:(NSString *)jsonStr
+{
+    if (jsonStr == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
 
 #pragma mark - 常用正则表达式
 + (BOOL)isEmail:(NSString *)str

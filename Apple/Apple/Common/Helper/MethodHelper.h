@@ -49,6 +49,8 @@
 #pragma mark - 字典转json字符串
 //////字典转json字符串
 + (NSString*)convertToJSONData:(id)infoDict;
+//////json字符串转字典
++ (NSDictionary *)convertToDict:(NSString *)jsonStr;
 
 #pragma mark - 常用正则表达式
 /* 验证邮箱 */
