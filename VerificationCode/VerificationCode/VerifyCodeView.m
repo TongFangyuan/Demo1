@@ -9,16 +9,7 @@
 #import "VerifyCodeView.h"
 #import "Masonry.h"
 
-
-
 @interface VerifyCodeView()<UITextFieldDelegate>
-
-@property (nonatomic,strong) UITextField *field1;
-@property (nonatomic,strong) UITextField *field2;
-@property (nonatomic,strong) UITextField *field3;
-@property (nonatomic,strong) UITextField *field4;
-@property (nonatomic,strong) UITextField *field5;
-@property (nonatomic,strong) UITextField *field6;
 
 @end
 
