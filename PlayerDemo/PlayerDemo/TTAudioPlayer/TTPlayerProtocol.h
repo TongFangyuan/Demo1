@@ -37,8 +37,8 @@
 
 - (void) continuePlay;
 
-- (float) currentSecs;
+- (double) currentSecs;
 
-- (float) durationSecs;
+- (double) durationSecs;
 
 @end

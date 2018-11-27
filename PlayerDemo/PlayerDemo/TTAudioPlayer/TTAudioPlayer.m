@@ -162,18 +162,18 @@ static void* playerItemContext = &playerItemContext;
     return NO;
 }
 
-- (float) currentSecs {
+- (double) currentSecs {
     return CMTimeGetSeconds(_player.currentTime);
 }
 
-- (float) durationSecs {
+- (double) durationSecs {
     return CMTimeGetSeconds(_player.currentItem.duration);
 }
 
 #pragma mark - 播放进度
 - (void)updateProgress {
-    CMTime playerDuration = [self playerItemDuration];
-    if (CMTIME_IS_INVALID(playerDuration))
+
+    if (_playerItem.status != AVPlayerItemStatusReadyToPlay)
     {
         if ([self.delegate respondsToSelector:@selector(ttAudioPlayerUpdateProgress:)]) {
             [self.delegate ttAudioPlayerUpdateProgress:0.0f];
@@ -181,9 +181,9 @@ static void* playerItemContext = &playerItemContext;
         return;
     }
     
-    double currentTime = CMTimeGetSeconds(_player.currentTime);
-    double duration = CMTimeGetSeconds(playerDuration);
-    if (isfinite(duration) && (duration > 0))
+    double currentTime = [self currentSecs];
+    double duration = [self durationSecs];
+    if (isfinite(duration) && (duration>0))
     {
         float maxValue = CMTimeGetSeconds(_player.currentItem.asset.duration);
         double progress =  currentTime/maxValue;
@@ -193,17 +193,6 @@ static void* playerItemContext = &playerItemContext;
     }
 }
 
-- (CMTime)playerItemDuration
-{
-    AVPlayerItem *thePlayerItem = [_player currentItem];
-    if (thePlayerItem.status == AVPlayerItemStatusReadyToPlay)
-    {
-        
-        return([thePlayerItem duration]);
-    }
-    
-    return(kCMTimeInvalid);
-}
 
 #pragma mark - KVO
 - (void)musicPlaybackFinished:(NSNotification *)noti {
