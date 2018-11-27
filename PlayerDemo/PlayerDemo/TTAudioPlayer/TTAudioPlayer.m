@@ -43,8 +43,9 @@ static void* playerItemContext = &playerItemContext;
     return self;
 }
 
-#pragma mark -
+#pragma mark -      ------------------播放协议--------------------
 
+#pragma mark 播放音频
 - (void)playMusicWithInfo:(id<TTMusicModelProtocol>)model {
     
     [self removeTimeObserver];
@@ -62,7 +63,7 @@ static void* playerItemContext = &playerItemContext;
     }];
 }
 
-#pragma mark - 播放队列管理
+#pragma mark 播放队列管理
 
 - (void)enterPlayQueueWithArray:(NSArray<id<TTMusicModelProtocol>> *)models {
     [_playQueue addObjectsFromArray:models];
@@ -88,7 +89,7 @@ static void* playerItemContext = &playerItemContext;
     [self playMusicWithInfo:model];
 }
 
-#pragma mark - 播放器控制
+#pragma mark 播放器控制
 
 - (void)next {
     if (![self isNextExist]) return;
