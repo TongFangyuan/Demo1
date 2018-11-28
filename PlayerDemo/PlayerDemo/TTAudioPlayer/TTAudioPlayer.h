@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TTPlayerProtocol.h"
 #import "TTAudioPlayerStatusDelegate.h"
+#import "TTMusicModel.h"
 
 @interface TTAudioPlayer : NSObject<TTPlayerProtocol>
 

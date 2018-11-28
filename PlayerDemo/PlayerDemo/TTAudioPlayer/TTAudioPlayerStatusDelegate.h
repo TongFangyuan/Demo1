@@ -18,5 +18,6 @@
 - (void)ttAudioPlayerPlayError:(NSError *)error;
 - (void)ttAudioPlayerSeekPosition:(double)progress;
 - (void)ttAudioPlayerUpdateProgress:(double)progress;
+- (void)ttAduioPlayerMusicInfoUpdate:(id<TTMusicModelProtocol>)musicInfo;
 
 @end

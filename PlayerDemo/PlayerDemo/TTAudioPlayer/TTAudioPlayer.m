@@ -57,6 +57,10 @@ static void* playerItemContext = &playerItemContext;
     [self.playQueue addObject:model];
     currentIndex = [self.playQueue indexOfObject:model];
     [self play];
+    NSLog(@"播放歌曲： %@-%@",model.author,model.name);
+    if ([self.delegate respondsToSelector:@selector(ttAduioPlayerMusicInfoUpdate:)]) {
+        [self.delegate ttAduioPlayerMusicInfoUpdate:model];
+    }
     
     timeObserver = [player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(1.0 / 60.0, NSEC_PER_SEC) queue:NULL usingBlock:^(CMTime time) {
         [self updateProgress];
@@ -67,11 +71,13 @@ static void* playerItemContext = &playerItemContext;
 
 - (void)enterPlayQueueWithArray:(NSArray<id<TTMusicModelProtocol>> *)models {
     [_playQueue addObjectsFromArray:models];
+    NSLog(@"进入播放队列:%@",models);
 }
 
 
 - (void)enterPlayQueueWithSingle:(id<TTMusicModelProtocol>)model {
     [_playQueue addObject:model];
+    NSLog(@"进入播放队列:%@",model);
 }
 
 
@@ -79,31 +85,34 @@ static void* playerItemContext = &playerItemContext;
     [self stop];
     [_playQueue removeAllObjects];
     [_playQueue addObjectsFromArray:models];
-    [self playMusicWithInfo:models.firstObject];
+    NSLog(@"更新播放队列:%@",_playQueue);
 }
 
 - (void)replaceAllQueueWithSingle:(id<TTMusicModelProtocol>)model {
     [self stop];
     [_playQueue removeAllObjects];
     [_playQueue addObject:model];
-    [self playMusicWithInfo:model];
+    NSLog(@"更新播放队列:%@",_playQueue);
 }
 
 #pragma mark 播放器控制
 
 - (void)next {
     if (![self isNextExist]) return;
+    NSLog(@"开始播放下一首");
     id<TTMusicModelProtocol> nextItem = _playQueue[currentIndex+1];
     [self playMusicWithInfo:nextItem];
 }
 
 - (void)pre {
     if (![self isPreExist]) return;
+    NSLog(@"开始播放前一首");
     id<TTMusicModelProtocol> preItem = _playQueue[currentIndex-1];
     [self playMusicWithInfo:preItem];
 }
 
 - (void)pause {
+    NSLog(@"暂停");
     [_player pause];
     if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPause)]) {
         [self.delegate ttAudioPlayerPause];
@@ -120,16 +129,16 @@ static void* playerItemContext = &playerItemContext;
     self.playerItem = nil;
     
     [self.playQueue removeAllObjects];
-    self.playQueue = nil;
     currentIndex = 0;
     if ([self.delegate respondsToSelector:@selector(ttAudioPlayerStoped)]) {
         [self.delegate ttAudioPlayerStoped];
     }
-    
+    NSLog(@"停止播放");
 }
 
 - (void) play {
     [_player play];
+    NSLog(@"播放");
     if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayStart)]) {
         [self.delegate ttAudioPlayerPlayStart];
     }
@@ -137,6 +146,7 @@ static void* playerItemContext = &playerItemContext;
 
 - (void) continuePlay {
     [_player play];
+    NSLog(@"继续播放");
     if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayStart)]) {
         [self.delegate ttAudioPlayerPlayStart];
     }
@@ -144,22 +154,28 @@ static void* playerItemContext = &playerItemContext;
 
 - (BOOL)isNextExist {
     if (currentIndex>=(_playQueue.count-1)) {
+        NSLog(@"没有下一曲");
         return NO;
     }
+    NSLog(@"有下一曲");
     return YES;
 }
 
 - (BOOL)isPreExist {
     if (currentIndex<=0) {
+        NSLog(@"没有前一首");
         return NO;
     }
+    NSLog(@"有前一首");
     return YES;
 }
 
 - (BOOL)isPlaying {
     if (_player && _player.rate > 0.0) {
+        NSLog(@"当前存在播放状态");
         return YES;
     }
+    NSLog(@"当前不在播放状态");
     return NO;
 }
 
@@ -245,12 +261,14 @@ static void* playerItemContext = &playerItemContext;
         [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:_playerItem];
         [_playerItem removeObserver:self forKeyPath:@"status"];
         [_playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+        NSLog(@"移除AVPlayerItem监听");
     }
     _playerItem = playerItem;
     if (playerItem) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(musicPlaybackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:playerItem];
         [playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:playerItemContext];
         [playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:playerItemContext];
+        NSLog(@"添加AVPlayerItem监听");
     }
 }
 
@@ -259,6 +277,7 @@ static void* playerItemContext = &playerItemContext;
     if (timeObserver) {
         [self.player removeTimeObserver:timeObserver];
         timeObserver = nil;
+        NSLog(@"移除时间监听");
     }
 }
 

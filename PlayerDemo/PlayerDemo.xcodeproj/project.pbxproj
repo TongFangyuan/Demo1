@@ -14,6 +14,28 @@
 		846D720521AD1D45006BFEB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846D720321AD1D45006BFEB4 /* LaunchScreen.storyboard */; };
 		846D720821AD1D45006BFEB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D720721AD1D45006BFEB4 /* main.m */; };
 		846D721821AD20B7006BFEB4 /* TTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D721721AD20B7006BFEB4 /* TTAudioPlayer.m */; };
+		84A1ABC221AE333B003362A2 /* AudioPlayBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABC121AE333B003362A2 /* AudioPlayBar.m */; };
+		84A1ABDD21AE36A7003362A2 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABC521AE36A7003362A2 /* MASCompositeConstraint.m */; };
+		84A1ABDE21AE36A7003362A2 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABC821AE36A7003362A2 /* MASConstraint.m */; };
+		84A1ABDF21AE36A7003362A2 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABCA21AE36A7003362A2 /* MASConstraintMaker.m */; };
+		84A1ABE021AE36A7003362A2 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABCC21AE36A7003362A2 /* MASLayoutConstraint.m */; };
+		84A1ABE121AE36A7003362A2 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABD021AE36A7003362A2 /* MASViewAttribute.m */; };
+		84A1ABE221AE36A7003362A2 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABD221AE36A7003362A2 /* MASViewConstraint.m */; };
+		84A1ABE321AE36A7003362A2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABD421AE36A7003362A2 /* NSArray+MASAdditions.m */; };
+		84A1ABE421AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABD721AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		84A1ABE521AE36A7003362A2 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABD921AE36A7003362A2 /* View+MASAdditions.m */; };
+		84A1ABE621AE36A7003362A2 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABDC21AE36A7003362A2 /* ViewController+MASAdditions.m */; };
+		84A1ABEF21AE382E003362A2 /* 上一首@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABE721AE382D003362A2 /* 上一首@2x.png */; };
+		84A1ABF021AE382E003362A2 /* 下一首@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABE821AE382D003362A2 /* 下一首@3x.png */; };
+		84A1ABF121AE382E003362A2 /* 上一首@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABE921AE382D003362A2 /* 上一首@3x.png */; };
+		84A1ABF221AE382E003362A2 /* 音乐图标@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABEA21AE382D003362A2 /* 音乐图标@2x.png */; };
+		84A1ABF321AE382E003362A2 /* 播放@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABEB21AE382E003362A2 /* 播放@2x.png */; };
+		84A1ABF421AE382E003362A2 /* 下一首@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABEC21AE382E003362A2 /* 下一首@2x.png */; };
+		84A1ABF521AE382E003362A2 /* 播放@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABED21AE382E003362A2 /* 播放@3x.png */; };
+		84A1ABF621AE382E003362A2 /* 音乐图标@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABEE21AE382E003362A2 /* 音乐图标@3x.png */; };
+		84A1ABFB21AE39BF003362A2 /* 暂停@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABF921AE39BF003362A2 /* 暂停@3x.png */; };
+		84A1ABFC21AE39BF003362A2 /* 暂停@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1ABFA21AE39BF003362A2 /* 暂停@2x.png */; };
+		84A1ABFF21AE404F003362A2 /* TTMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1ABFE21AE404F003362A2 /* TTMusicModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +54,45 @@
 		846D721921AD20D6006BFEB4 /* TTPlayerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTPlayerProtocol.h; sourceTree = "<group>"; };
 		846D721A21AD2142006BFEB4 /* TTMusicModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMusicModelProtocol.h; sourceTree = "<group>"; };
 		846D721B21AD3D96006BFEB4 /* TTAudioPlayerStatusDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAudioPlayerStatusDelegate.h; sourceTree = "<group>"; };
+		84A1ABC021AE333B003362A2 /* AudioPlayBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayBar.h; sourceTree = "<group>"; };
+		84A1ABC121AE333B003362A2 /* AudioPlayBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayBar.m; sourceTree = "<group>"; };
+		84A1ABC421AE36A7003362A2 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		84A1ABC521AE36A7003362A2 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		84A1ABC621AE36A7003362A2 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		84A1ABC721AE36A7003362A2 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		84A1ABC821AE36A7003362A2 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		84A1ABC921AE36A7003362A2 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		84A1ABCA21AE36A7003362A2 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		84A1ABCB21AE36A7003362A2 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		84A1ABCC21AE36A7003362A2 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		84A1ABCD21AE36A7003362A2 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		84A1ABCE21AE36A7003362A2 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		84A1ABCF21AE36A7003362A2 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		84A1ABD021AE36A7003362A2 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		84A1ABD121AE36A7003362A2 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		84A1ABD221AE36A7003362A2 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		84A1ABD321AE36A7003362A2 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		84A1ABD421AE36A7003362A2 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		84A1ABD521AE36A7003362A2 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		84A1ABD621AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		84A1ABD721AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		84A1ABD821AE36A7003362A2 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		84A1ABD921AE36A7003362A2 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		84A1ABDA21AE36A7003362A2 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		84A1ABDB21AE36A7003362A2 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		84A1ABDC21AE36A7003362A2 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		84A1ABE721AE382D003362A2 /* 上一首@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上一首@2x.png"; sourceTree = "<group>"; };
+		84A1ABE821AE382D003362A2 /* 下一首@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一首@3x.png"; sourceTree = "<group>"; };
+		84A1ABE921AE382D003362A2 /* 上一首@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上一首@3x.png"; sourceTree = "<group>"; };
+		84A1ABEA21AE382D003362A2 /* 音乐图标@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "音乐图标@2x.png"; sourceTree = "<group>"; };
+		84A1ABEB21AE382E003362A2 /* 播放@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播放@2x.png"; sourceTree = "<group>"; };
+		84A1ABEC21AE382E003362A2 /* 下一首@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一首@2x.png"; sourceTree = "<group>"; };
+		84A1ABED21AE382E003362A2 /* 播放@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播放@3x.png"; sourceTree = "<group>"; };
+		84A1ABEE21AE382E003362A2 /* 音乐图标@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "音乐图标@3x.png"; sourceTree = "<group>"; };
+		84A1ABF921AE39BF003362A2 /* 暂停@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂停@3x.png"; sourceTree = "<group>"; };
+		84A1ABFA21AE39BF003362A2 /* 暂停@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂停@2x.png"; sourceTree = "<group>"; };
+		84A1ABFD21AE404F003362A2 /* TTMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMusicModel.h; sourceTree = "<group>"; };
+		84A1ABFE21AE404F003362A2 /* TTMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMusicModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +125,8 @@
 		846D71F721AD1D3F006BFEB4 /* PlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84A1ABC321AE36A7003362A2 /* Masonry */,
+				84A1ABBF21AE312F003362A2 /* AudioPlayBar */,
 				846D720E21AD1F5B006BFEB4 /* TTAudioPlayer */,
 				846D71F821AD1D3F006BFEB4 /* AppDelegate.h */,
 				846D71F921AD1D3F006BFEB4 /* AppDelegate.m */,
@@ -86,8 +149,69 @@
 				846D721A21AD2142006BFEB4 /* TTMusicModelProtocol.h */,
 				846D721621AD20B7006BFEB4 /* TTAudioPlayer.h */,
 				846D721721AD20B7006BFEB4 /* TTAudioPlayer.m */,
+				84A1ABFD21AE404F003362A2 /* TTMusicModel.h */,
+				84A1ABFE21AE404F003362A2 /* TTMusicModel.m */,
 			);
 			path = TTAudioPlayer;
+			sourceTree = "<group>";
+		};
+		84A1ABBF21AE312F003362A2 /* AudioPlayBar */ = {
+			isa = PBXGroup;
+			children = (
+				84A1ABC021AE333B003362A2 /* AudioPlayBar.h */,
+				84A1ABC121AE333B003362A2 /* AudioPlayBar.m */,
+				84A1ABF821AE383C003362A2 /* resource */,
+			);
+			path = AudioPlayBar;
+			sourceTree = "<group>";
+		};
+		84A1ABC321AE36A7003362A2 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				84A1ABC421AE36A7003362A2 /* MASCompositeConstraint.h */,
+				84A1ABC521AE36A7003362A2 /* MASCompositeConstraint.m */,
+				84A1ABC621AE36A7003362A2 /* MASConstraint+Private.h */,
+				84A1ABC721AE36A7003362A2 /* MASConstraint.h */,
+				84A1ABC821AE36A7003362A2 /* MASConstraint.m */,
+				84A1ABC921AE36A7003362A2 /* MASConstraintMaker.h */,
+				84A1ABCA21AE36A7003362A2 /* MASConstraintMaker.m */,
+				84A1ABCB21AE36A7003362A2 /* MASLayoutConstraint.h */,
+				84A1ABCC21AE36A7003362A2 /* MASLayoutConstraint.m */,
+				84A1ABCD21AE36A7003362A2 /* Masonry.h */,
+				84A1ABCE21AE36A7003362A2 /* MASUtilities.h */,
+				84A1ABCF21AE36A7003362A2 /* MASViewAttribute.h */,
+				84A1ABD021AE36A7003362A2 /* MASViewAttribute.m */,
+				84A1ABD121AE36A7003362A2 /* MASViewConstraint.h */,
+				84A1ABD221AE36A7003362A2 /* MASViewConstraint.m */,
+				84A1ABD321AE36A7003362A2 /* NSArray+MASAdditions.h */,
+				84A1ABD421AE36A7003362A2 /* NSArray+MASAdditions.m */,
+				84A1ABD521AE36A7003362A2 /* NSArray+MASShorthandAdditions.h */,
+				84A1ABD621AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				84A1ABD721AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				84A1ABD821AE36A7003362A2 /* View+MASAdditions.h */,
+				84A1ABD921AE36A7003362A2 /* View+MASAdditions.m */,
+				84A1ABDA21AE36A7003362A2 /* View+MASShorthandAdditions.h */,
+				84A1ABDB21AE36A7003362A2 /* ViewController+MASAdditions.h */,
+				84A1ABDC21AE36A7003362A2 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		84A1ABF821AE383C003362A2 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				84A1ABFA21AE39BF003362A2 /* 暂停@2x.png */,
+				84A1ABF921AE39BF003362A2 /* 暂停@3x.png */,
+				84A1ABEB21AE382E003362A2 /* 播放@2x.png */,
+				84A1ABED21AE382E003362A2 /* 播放@3x.png */,
+				84A1ABE721AE382D003362A2 /* 上一首@2x.png */,
+				84A1ABE921AE382D003362A2 /* 上一首@3x.png */,
+				84A1ABEC21AE382E003362A2 /* 下一首@2x.png */,
+				84A1ABE821AE382D003362A2 /* 下一首@3x.png */,
+				84A1ABEA21AE382D003362A2 /* 音乐图标@2x.png */,
+				84A1ABEE21AE382E003362A2 /* 音乐图标@3x.png */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +272,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				846D720521AD1D45006BFEB4 /* LaunchScreen.storyboard in Resources */,
+				84A1ABF321AE382E003362A2 /* 播放@2x.png in Resources */,
+				84A1ABF221AE382E003362A2 /* 音乐图标@2x.png in Resources */,
 				846D720221AD1D45006BFEB4 /* Assets.xcassets in Resources */,
+				84A1ABF421AE382E003362A2 /* 下一首@2x.png in Resources */,
 				846D720021AD1D3F006BFEB4 /* Main.storyboard in Resources */,
+				84A1ABF521AE382E003362A2 /* 播放@3x.png in Resources */,
+				84A1ABF621AE382E003362A2 /* 音乐图标@3x.png in Resources */,
+				84A1ABEF21AE382E003362A2 /* 上一首@2x.png in Resources */,
+				84A1ABFB21AE39BF003362A2 /* 暂停@3x.png in Resources */,
+				84A1ABF121AE382E003362A2 /* 上一首@3x.png in Resources */,
+				84A1ABF021AE382E003362A2 /* 下一首@3x.png in Resources */,
+				84A1ABFC21AE39BF003362A2 /* 暂停@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,9 +294,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A1ABE421AE36A7003362A2 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				846D71FD21AD1D3F006BFEB4 /* ViewController.m in Sources */,
+				84A1ABE221AE36A7003362A2 /* MASViewConstraint.m in Sources */,
+				84A1ABFF21AE404F003362A2 /* TTMusicModel.m in Sources */,
 				846D720821AD1D45006BFEB4 /* main.m in Sources */,
 				846D721821AD20B7006BFEB4 /* TTAudioPlayer.m in Sources */,
+				84A1ABC221AE333B003362A2 /* AudioPlayBar.m in Sources */,
+				84A1ABE521AE36A7003362A2 /* View+MASAdditions.m in Sources */,
+				84A1ABDD21AE36A7003362A2 /* MASCompositeConstraint.m in Sources */,
+				84A1ABE121AE36A7003362A2 /* MASViewAttribute.m in Sources */,
+				84A1ABDF21AE36A7003362A2 /* MASConstraintMaker.m in Sources */,
+				84A1ABE321AE36A7003362A2 /* NSArray+MASAdditions.m in Sources */,
+				84A1ABE621AE36A7003362A2 /* ViewController+MASAdditions.m in Sources */,
+				84A1ABDE21AE36A7003362A2 /* MASConstraint.m in Sources */,
+				84A1ABE021AE36A7003362A2 /* MASLayoutConstraint.m in Sources */,
 				846D71FA21AD1D3F006BFEB4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +452,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5PK3MYTY26;
 				INFOPLIST_FILE = PlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +473,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5PK3MYTY26;
 				INFOPLIST_FILE = PlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
