@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  Apple
+//
+//  Created by admin on 2018/10/24.
+//  Copyright © 2018年 tongfy. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import "MethodHelper.h"
+#import "MBProgressHUD+Add.h"
+#import "UIViewController+HUD.h"
+#import "ConstantMgr.h"
+#import "BaseViewController.h"
+#import "BaseNavigationController.h"
+#import "Application.h"
+#import "BleDef.h"
+#import "YYModel.h"
+#import "Masonry.h"
+#import "SSKeychain.h"
+#import "TTErrorView.h"
+
+//////////////////// pods
+#import <LKDBHelper.h>
+#import <Bugly/Bugly.h>
+
+#endif
+
+#endif /* PrefixHeader_pch */

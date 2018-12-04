@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANTAL-Normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ind-ot-QuP">
+                                <rect key="frame" x="118" y="76" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="i7X-sU-qNf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FilsonSoft-Light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld6-PK-ze2">
+                                <rect key="frame" x="126" y="107" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFProText-Regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-gD-1eP">
+                                <rect key="frame" x="116.5" y="169" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FilsonSoftBook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx4-x9-Itl">
+                                <rect key="frame" x="129.5" y="138" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ind-ot-QuP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Rj-ZM-JVo"/>
+                            <constraint firstItem="lx4-x9-Itl" firstAttribute="top" secondItem="Ld6-PK-ze2" secondAttribute="bottom" constant="10" id="Nmw-Uh-Hsp"/>
+                            <constraint firstItem="MZd-gD-1eP" firstAttribute="centerX" secondItem="ind-ot-QuP" secondAttribute="centerX" id="TVI-Y0-Whe"/>
+                            <constraint firstItem="MZd-gD-1eP" firstAttribute="top" secondItem="lx4-x9-Itl" secondAttribute="bottom" constant="10" id="U3V-Dl-hsV"/>
+                            <constraint firstItem="lx4-x9-Itl" firstAttribute="centerX" secondItem="ind-ot-QuP" secondAttribute="centerX" id="Xay-6m-bq7"/>
+                            <constraint firstItem="ind-ot-QuP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="gD0-fP-Y5A"/>
+                            <constraint firstItem="Ld6-PK-ze2" firstAttribute="top" secondItem="ind-ot-QuP" secondAttribute="bottom" constant="10" id="gGZ-6x-hx2"/>
+                            <constraint firstItem="Ld6-PK-ze2" firstAttribute="centerX" secondItem="ind-ot-QuP" secondAttribute="centerX" id="gWu-9u-S7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="ind-ot-QuP" id="Sx4-bf-iPC"/>
+                        <outlet property="label2" destination="Ld6-PK-ze2" id="FZ2-NQ-URh"/>
+                        <outlet property="label3" destination="lx4-x9-Itl" id="wNn-u0-l5o"/>
+                        <outlet property="label4" destination="MZd-gD-1eP" id="i7m-pN-iDT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
