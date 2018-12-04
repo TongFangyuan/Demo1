@@ -63,7 +63,7 @@ static void* playerItemContext = &playerItemContext;
     AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
     self.player = player;
     self.playerItem = playerItem;
-
+    
     currentTime = 0;
     bufferTime  = 0;
     
@@ -108,28 +108,28 @@ static void* playerItemContext = &playerItemContext;
 #pragma mark 播放器控制
 
 - (void)next {
-    if (![self isNextExist]) {
-        currentIndex = 0;
-        NSLog(@"播放第0首");
-        [self playMusicWithInfo:_playQueue.firstObject];
-    } else {
+    if ([self isNextExist]) {
         NSLog(@"准备播放下一首");
         id<TTMusicModelProtocol> nextItem = _playQueue[currentIndex+1];
         currentIndex++;
         [self playMusicWithInfo:nextItem];
+    } else if(_playQueue.count) {
+        currentIndex = 0;
+        NSLog(@"播放队首歌曲");
+        [self playMusicWithInfo:_playQueue.firstObject];
     }
 }
 
 - (void)pre {
-    if (![self isPreExist]) {
-        currentIndex = _playQueue.count-1;
-        NSLog(@"播放第%ld首",currentIndex);
-        [self playMusicWithInfo:_playQueue[currentIndex]];
-    } else {
+    if ([self isPreExist]) {
         NSLog(@"准备播放前一首");
         id<TTMusicModelProtocol> preItem = _playQueue[currentIndex-1];
         currentIndex--;
         [self playMusicWithInfo:preItem];
+    } else if(_playQueue.lastObject) {
+        currentIndex = [_playQueue indexOfObject:_playQueue.lastObject];
+        NSLog(@"播放队尾歌曲");
+        [self playMusicWithInfo:_playQueue.lastObject];
     }
 }
 
@@ -175,7 +175,7 @@ static void* playerItemContext = &playerItemContext;
 }
 
 - (BOOL)isNextExist {
-    if (currentIndex>=(_playQueue.count-1)) {
+    if (currentIndex>=(_playQueue.count-1) || _playQueue.count==0) {
         NSLog(@"没有下一曲");
         return NO;
     }
@@ -211,7 +211,7 @@ static void* playerItemContext = &playerItemContext;
 
 #pragma mark - 播放进度
 - (void)updateProgress {
-
+    
     if (_playerItem.status != AVPlayerItemStatusReadyToPlay)
     {
         if ([self.delegate respondsToSelector:@selector(ttAudioPlayerUpdateProgress:)]) {
@@ -250,7 +250,7 @@ static void* playerItemContext = &playerItemContext;
 - (void)musicPlaybackFinished:(NSNotification *)noti {
     
     [self next];
-
+    
     if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayFinished)]) {
         [self.delegate ttAudioPlayerPlayFinished];
     }
@@ -269,9 +269,9 @@ static void* playerItemContext = &playerItemContext;
     if ([@"status" isEqualToString:keyPath]) {
         if (AVPlayerItemStatusFailed == [item status]) {
             NSError *error = [item error];
-           if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayError:)]) {
-             [self.delegate ttAudioPlayerPlayError:error];
-           }
+            if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayError:)]) {
+                [self.delegate ttAudioPlayerPlayError:error];
+            }
             NSLog(@"AVPlayerItem.status->音频播放出错");
         } else if (AVPlayerItemStatusReadyToPlay == [item status]) {
             if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayStart)]) {

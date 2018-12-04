@@ -46,7 +46,7 @@
     item3.url  = @"http://tmjl128.alicdn.com/841/395312841/695312853/1772798197_15662156_l.mp3?auth_key=1543978800-0-0-bac3b7dd08f7fb9642e7820940448f41";
     item3.author = @"碧瑶";
     
-    NSArray *items = @[item1,item2,item3];
+    NSArray *items = @[item1,item2,item3,item4,item5];
     /// 配置播放数据
     [TTAudioPlayer shareInstance].delegate = self;
     [[TTAudioPlayer shareInstance] replaceAllQueueWithArray:items];
