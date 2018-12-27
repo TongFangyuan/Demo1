@@ -13,11 +13,21 @@
 
 @interface TTAudioPlayer : NSObject<TTPlayerProtocol>
 
-//@property (nonatomic, weak) id<TTAudioPlayerStatusDelegate> delegate;
-
+////// 单例
 + (instancetype)shareInstance;
 
+/**
+ 播放队列
+ */
+@property (nonatomic, strong, readonly) NSMutableArray<id<TTMusicModelProtocol>>  *playQueue;
+
+/**
+ 状态监听者添加
+ */
 - (void)addStatusDelagate:(id<TTAudioPlayerStatusDelegate>)delegate;
+/**
+ 移除状态监听者
+ */
 - (void)removeStatusDelegate:(id<TTAudioPlayerStatusDelegate>)delegate;
 
 @end

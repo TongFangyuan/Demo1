@@ -19,8 +19,7 @@
 
 @property (nonatomic, strong) AVPlayer                                  *player;
 @property (nonatomic, strong) AVPlayerItem                              *playerItem;
-@property (nonatomic, strong) NSMutableArray<id<TTMusicModelProtocol>>  *playQueue;
-
+@property (nonatomic, strong, readwrite) NSMutableArray<id<TTMusicModelProtocol>>  *playQueue;
 @property (nonatomic, strong) NSMutableArray<id<TTAudioPlayerStatusDelegate>> *statusDelegates;
 
 @end
