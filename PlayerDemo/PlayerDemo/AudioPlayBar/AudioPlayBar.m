@@ -9,7 +9,7 @@
 #import "AudioPlayBar.h"
 #import "Masonry.h"
 
-@interface AudioPlayBar()
+@interface AudioPlayBar()<TTAudioPlayerStatusDelegate>
 
 @property (nonatomic, strong) UIImageView    *thumImageView;
 @property (nonatomic, strong) UILabel        *textLabel;
@@ -31,9 +31,14 @@
     return instance;
 }
 
+- (instancetype)init {
+    if (self = [super init]) {
+        [[TTAudioPlayer shareInstance] addStatusDelagate:self];
+    }
+    return self;
+}
 
 #pragma mark - public
-
 - (void)updateProgress:(double)value {
     [self.progressView setProgress:value animated:NO];
 }
@@ -46,8 +51,65 @@
     self.textLabel.text = model.name;
 }
 
-#pragma mark - priavte
 
+#pragma mark - TTAudioControl
+- (void)pre {
+    [[TTAudioPlayer shareInstance] pre];
+}
+
+- (void)next {
+    [[TTAudioPlayer shareInstance] next];
+}
+- (void) pause {
+    [[TTAudioPlayer shareInstance] pause];
+}
+- (void) stop {
+    [[TTAudioPlayer shareInstance] stop];
+}
+- (void) play {
+    [[TTAudioPlayer shareInstance] play];
+}
+
+- (void)playOrPause {
+    BOOL isPlay = !self.playPauseButton.selected;
+    if (isPlay) {
+        [self play];
+    } else {
+        [self pause];
+    }
+}
+
+#pragma mark -  TTAudioPlayerStatusDelegate
+- (void)ttAudioPlayerPlayStart{
+    [self updatePlayStatus:YES];
+}
+- (void)ttAudioPlayerPlayFinished{
+    [self updatePlayStatus:NO];
+}
+- (void)ttAudioPlayerPause{
+    [self updatePlayStatus:NO];
+}
+- (void)ttAudioPlayerStoped{
+    [self updatePlayStatus:NO];
+}
+- (void)ttAudioPlayerPlayError:(NSError *)error{
+    [self updatePlayStatus:NO];
+    NSLog(@"音乐播放错误%@",error.description);
+}
+- (void)ttAudioPlayerSeekPosition:(double)progress{
+    NSLog(@"");
+}
+- (void)ttAudioPlayerUpdateProgress:(double)progress
+{
+    [self updateProgress:progress];
+}
+
+- (void)ttAduioPlayerMusicInfoUpdate:(id<TTMusicModelProtocol>)musicInfo
+{
+    [self updateMusicInfo:musicInfo];
+}
+
+#pragma mark - private
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self=[super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 60)]) {
         [self setupUI];
@@ -127,21 +189,9 @@
     [self.preButton addTarget:self action:@selector(pre) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)pre {
-    [[TTAudioPlayer shareInstance] pre];
-}
-
-- (void)next {
-    [[TTAudioPlayer shareInstance] next];
-}
-
-- (void)playOrPause {
-    BOOL isPlay = !self.playPauseButton.selected;
-    if (isPlay) {
-        [[TTAudioPlayer shareInstance] play];
-    } else {
-        [[TTAudioPlayer shareInstance] pause];
-    }
+- (void)dealloc
+{
+    [[TTAudioPlayer shareInstance] removeStatusDelegate:self];
 }
 
 @end

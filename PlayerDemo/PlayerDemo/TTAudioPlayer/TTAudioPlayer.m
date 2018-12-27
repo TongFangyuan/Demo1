@@ -21,6 +21,8 @@
 @property (nonatomic, strong) AVPlayerItem                              *playerItem;
 @property (nonatomic, strong) NSMutableArray<id<TTMusicModelProtocol>>  *playQueue;
 
+@property (nonatomic, strong) NSMutableArray<id<TTAudioPlayerStatusDelegate>> *statusDelegates;
+
 @end
 
 
@@ -48,6 +50,8 @@ static void* playerItemContext = &playerItemContext;
         //
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterreptionNotification:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
         
+        _statusDelegates = [NSMutableArray array];
+        
     }
     return self;
 }
@@ -69,9 +73,8 @@ static void* playerItemContext = &playerItemContext;
     
     [self play];
     NSLog(@"播放第%ld首歌曲：%@-%@",currentIndex,model.author,model.name);
-    if ([self.delegate respondsToSelector:@selector(ttAduioPlayerMusicInfoUpdate:)]) {
-        [self.delegate ttAduioPlayerMusicInfoUpdate:model];
-    }
+    
+    [self.statusDelegates makeObjectsPerformSelector:@selector(ttAduioPlayerMusicInfoUpdate:) withObject:model];
     
     NSLog(@"添加新的时间监听");
     timeObserver = [player addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(1.0 / 60.0, NSEC_PER_SEC) queue:NULL usingBlock:^(CMTime time) {
@@ -136,9 +139,8 @@ static void* playerItemContext = &playerItemContext;
 - (void)pause {
     NSLog(@"暂停");
     [_player pause];
-    if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPause)]) {
-        [self.delegate ttAudioPlayerPause];
-    }
+    
+    [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerPause)];
 }
 
 - (void)stop {
@@ -152,26 +154,21 @@ static void* playerItemContext = &playerItemContext;
     
     [self.playQueue removeAllObjects];
     currentIndex = 0;
-    if ([self.delegate respondsToSelector:@selector(ttAudioPlayerStoped)]) {
-        [self.delegate ttAudioPlayerStoped];
-    }
+    [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerStoped)];
     NSLog(@"停止播放");
 }
 
 - (void) play {
     [_player play];
     NSLog(@"播放");
-    if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayStart)]) {
-        [self.delegate ttAudioPlayerPlayStart];
-    }
+    [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerPlayStart)];
+
 }
 
 - (void) continuePlay {
     [_player play];
     NSLog(@"继续播放");
-    if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayStart)]) {
-        [self.delegate ttAudioPlayerPlayStart];
-    }
+    [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerPlayStart)];
 }
 
 - (BOOL)isNextExist {
@@ -214,9 +211,7 @@ static void* playerItemContext = &playerItemContext;
     
     if (_playerItem.status != AVPlayerItemStatusReadyToPlay)
     {
-        if ([self.delegate respondsToSelector:@selector(ttAudioPlayerUpdateProgress:)]) {
-            [self.delegate ttAudioPlayerUpdateProgress:0.0f];
-        }
+        [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerUpdateProgress:) withObject:@(0.0f)];
         return;
     }
     
@@ -226,10 +221,7 @@ static void* playerItemContext = &playerItemContext;
     {
         float maxValue = CMTimeGetSeconds(_player.currentItem.asset.duration);
         double progress =  currentTime/maxValue;
-        if ([self.delegate respondsToSelector:@selector(ttAudioPlayerUpdateProgress:)]) {
-            [self.delegate ttAudioPlayerUpdateProgress:progress];
-        }
-        
+        [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerUpdateProgress:) withObject:@(progress)];
         self->currentTime = currentTime;
     }
 }
@@ -251,9 +243,9 @@ static void* playerItemContext = &playerItemContext;
     
     [self next];
     
-    if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayFinished)]) {
-        [self.delegate ttAudioPlayerPlayFinished];
-    }
+//    if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayFinished)]) {
+//        [self.delegate ttAudioPlayerPlayFinished];
+//    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -269,14 +261,11 @@ static void* playerItemContext = &playerItemContext;
     if ([@"status" isEqualToString:keyPath]) {
         if (AVPlayerItemStatusFailed == [item status]) {
             NSError *error = [item error];
-            if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayError:)]) {
-                [self.delegate ttAudioPlayerPlayError:error];
-            }
+            [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerPlayError:) withObject:error];
+
             NSLog(@"AVPlayerItem.status->音频播放出错");
         } else if (AVPlayerItemStatusReadyToPlay == [item status]) {
-            if ([self.delegate respondsToSelector:@selector(ttAudioPlayerPlayStart)]) {
-                [self.delegate ttAudioPlayerPlayStart];
-            }
+            [self.statusDelegates makeObjectsPerformSelector:@selector(ttAudioPlayerPlayStart)];
             NSLog(@"AVPlayerItem.status->音频ReadyToPlay");
         }
     } else if ([@"loadedTimeRanges" isEqualToString:keyPath]) {
@@ -326,7 +315,16 @@ static void* playerItemContext = &playerItemContext;
     }
 }
 
-#pragma mark - private
+#pragma mark - /******************************     监听者管理    ******************************/
+- (void)addStatusDelagate:(id<TTAudioPlayerStatusDelegate>)delegate {
+    [_statusDelegates addObject:delegate];
+}
+- (void)removeStatusDelegate:(id<TTAudioPlayerStatusDelegate>)delegate
+{
+    [_statusDelegates removeObject:delegate];
+}
+
+#pragma mark - /******************************     private    ******************************/ate
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8418889121D4CE1B00E48628 /* TTAudioControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAudioControl.h; sourceTree = "<group>"; };
 		846D71F521AD1D3F006BFEB4 /* PlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846D71F821AD1D3F006BFEB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		846D71F921AD1D3F006BFEB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 		84A1ABBF21AE312F003362A2 /* AudioPlayBar */ = {
 			isa = PBXGroup;
 			children = (
+				8418889121D4CE1B00E48628 /* TTAudioControl.h */,
 				84A1ABC021AE333B003362A2 /* AudioPlayBar.h */,
 				84A1ABC121AE333B003362A2 /* AudioPlayBar.m */,
 				84A1ABF821AE383C003362A2 /* resource */,

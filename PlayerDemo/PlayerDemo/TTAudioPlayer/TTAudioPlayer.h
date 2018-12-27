@@ -13,8 +13,11 @@
 
 @interface TTAudioPlayer : NSObject<TTPlayerProtocol>
 
-@property (nonatomic, weak) id<TTAudioPlayerStatusDelegate> delegate;
+//@property (nonatomic, weak) id<TTAudioPlayerStatusDelegate> delegate;
 
 + (instancetype)shareInstance;
+
+- (void)addStatusDelagate:(id<TTAudioPlayerStatusDelegate>)delegate;
+- (void)removeStatusDelegate:(id<TTAudioPlayerStatusDelegate>)delegate;
 
 @end

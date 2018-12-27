@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TTAudioPlayer.h"
+#import "TTAudioControl.h"
 
-@interface AudioPlayBar : UIView
+@interface AudioPlayBar : UIView<TTAudioControl>
 
 + (instancetype)sharePlayBar;
 
