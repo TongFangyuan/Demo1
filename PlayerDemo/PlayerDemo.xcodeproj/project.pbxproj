@@ -110,10 +110,10 @@
 		8418889221D4D60400E48628 /* AudioPlayBar */ = {
 			isa = PBXGroup;
 			children = (
+				841888A021D4D60400E48628 /* TTAudioControl.h */,
 				8418889321D4D60400E48628 /* AudioPlayBar.h */,
 				8418889421D4D60400E48628 /* AudioPlayBar.m */,
 				8418889521D4D60400E48628 /* resource */,
-				841888A021D4D60400E48628 /* TTAudioControl.h */,
 			);
 			path = AudioPlayBar;
 			sourceTree = "<group>";
