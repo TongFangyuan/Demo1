@@ -23,10 +23,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.label1.font = [UIFont chantalFontOfSize:16];
-    self.label2.font = [UIFont filsonSoftLightFontOfSize:16];
-    self.label3.font = [UIFont filsonSoftBookFontOfSize:16.f];
-    self.label4.font = [UIFont sfProTextRegularFontOfSize:16.f];
+//    self.label1.font = [UIFont chantalFontOfSize:16];
+//    self.label2.font = [UIFont filsonSoftLightFontOfSize:16];
+//    self.label3.font = [UIFont filsonSoftBookFontOfSize:16.f];
+//    self.label4.font = [UIFont sfProTextRegularFontOfSize:16.f];
+    
+    self.label1.font = [UIFont fontWithName:@"CHANTAL-Normal" size:16];
+    self.label2.font = [UIFont fontWithName:@"FilsonSoft-Light" size:116];
+    self.label3.font = [UIFont fontWithName:@"FilsonSoftBook" size:16];
+    self.label4.font = [UIFont fontWithName:@"SFProText-Regular" size:16];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
