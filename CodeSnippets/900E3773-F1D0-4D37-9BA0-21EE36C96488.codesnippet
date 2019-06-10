@@ -3,22 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttdhzs</string>
+	<string>tttdmfl</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/* &lt;#name#&gt; */
+	<string>
+#pragma mark - life cycle
+
+
+#pragma mark - delegate
+
+
+#pragma mark - event response
+
+
+#pragma mark - private methods
+
+
+#pragma mark - getters and setters
+
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>24A3BCD2-FD3C-45C2-A8E7-0EDE1E25D6C5</string>
+	<string>900E3773-F1D0-4D37-9BA0-21EE36C96488</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttdhzs</string>
+	<string>tttdmfl</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>单行注释: /* 文字 */</string>
+	<string>代码分类</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

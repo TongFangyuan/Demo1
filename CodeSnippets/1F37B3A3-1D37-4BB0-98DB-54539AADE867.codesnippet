@@ -3,22 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttdhzs</string>
+	<string>tttdanli</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/* &lt;#name#&gt; */
+	<string>+ (nonnull instancetype)share&lt;#Name#&gt; {
+    static dispatch_once_t once;
+    static id instance;
+    dispatch_once(&amp;once, ^{
+        instance = [self new];
+    });
+    return instance;
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>24A3BCD2-FD3C-45C2-A8E7-0EDE1E25D6C5</string>
+	<string>1F37B3A3-1D37-4BB0-98DB-54539AADE867</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttdhzs</string>
+	<string>tttdanli</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>单行注释: /* 文字 */</string>
+	<string>单例方法</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

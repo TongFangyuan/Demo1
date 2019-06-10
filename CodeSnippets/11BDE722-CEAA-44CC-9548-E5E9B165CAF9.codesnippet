@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttdhzs</string>
+	<string>@interface</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/* &lt;#name#&gt; */
+	<string>@interface &lt;#name#&gt; : &lt;#Name#&gt;
+
+@end
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>24A3BCD2-FD3C-45C2-A8E7-0EDE1E25D6C5</string>
+	<string>11BDE722-CEAA-44CC-9548-E5E9B165CAF9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>tttdhzs</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>单行注释: /* 文字 */</string>
+	<string>interface</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
