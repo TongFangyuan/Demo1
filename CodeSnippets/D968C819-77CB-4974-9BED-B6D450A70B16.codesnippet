@@ -3,24 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttfgzs</string>
+	<string>tttzixc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/******************************   &lt;#Name#&gt;   ******************************/</string>
+	<string>dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    
+                });</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>47D21D27-DB13-481D-87E5-55A0C1686513</string>
+	<string>D968C819-77CB-4974-9BED-B6D450A70B16</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttfgzs</string>
+	<string>tttzixc</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>分割注释: /***name***/</string>
+	<string>子线程执行代码</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
