@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73D4F8FA7F36FF441D18C69C /* Pods_ThirdPartySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4D05423CE5079B002D78D6 /* Pods_ThirdPartySDK.framework */; };
+		8564B78B22DDC9CB001DF514 /* TTFacebookTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8564B78A22DDC9CB001DF514 /* TTFacebookTool.m */; };
 		8589BD7B22D5864B000BBE14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8589BD7A22D5864B000BBE14 /* AppDelegate.m */; };
 		8589BD7E22D5864B000BBE14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8589BD7D22D5864B000BBE14 /* ViewController.m */; };
 		8589BD8122D5864B000BBE14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8589BD7F22D5864B000BBE14 /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		4AC4D720957F03B26EF8F767 /* Pods-ThirdPartySDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartySDKTests.release.xcconfig"; path = "Target Support Files/Pods-ThirdPartySDKTests/Pods-ThirdPartySDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		759664032705F5B2185F3E3E /* Pods_ThirdPartySDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThirdPartySDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8555AA24EA83DC078EE95930 /* Pods-ThirdPartySDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartySDKTests.debug.xcconfig"; path = "Target Support Files/Pods-ThirdPartySDKTests/Pods-ThirdPartySDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8564B78922DDC9CB001DF514 /* TTFacebookTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFacebookTool.h; sourceTree = "<group>"; };
+		8564B78A22DDC9CB001DF514 /* TTFacebookTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFacebookTool.m; sourceTree = "<group>"; };
 		8589BD7622D5864B000BBE14 /* ThirdPartySDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdPartySDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8589BD7922D5864B000BBE14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8589BD7A22D5864B000BBE14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 		8589BDAE22D5908A000BBE14 /* facebook */ = {
 			isa = PBXGroup;
 			children = (
+				8564B78922DDC9CB001DF514 /* TTFacebookTool.h */,
+				8564B78A22DDC9CB001DF514 /* TTFacebookTool.m */,
 			);
 			path = facebook;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				8589BD7E22D5864B000BBE14 /* ViewController.m in Sources */,
 				8589BD8922D5864D000BBE14 /* main.m in Sources */,
 				8589BD7B22D5864B000BBE14 /* AppDelegate.m in Sources */,
+				8564B78B22DDC9CB001DF514 /* TTFacebookTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
