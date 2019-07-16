@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tttimer</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - 定时器
+// 将 timer 和countDown 添加为属性
+// @property (nonatomic, strong) NSTimer *timer; //!&lt; 定时器
+// @property (nonatomic, assign) int    countDown; //!&lt; 定时器启动次数
+
+/** 开启定时器 */
+- (void)startTimer {
+    if (self.timer) [self stopTimer];
+    self.countDown = 60;
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    self.timer = timer;
+}
+
+/** 关闭定时器  */
+- (void)stopTimer {
+    if (!self.timer) return;
+    [self.timer invalidate];
+    self.timer = nil;
+    self.countDown = 0;
+}
+
+- (void)timerAction:(NSTimer *)timer {
+    self.countDown--;
+    if (self.countDown&lt;=0) {
+        [self stopTimer];
+    }
+    NSLog(@"count down :%d", self.countDown);
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>819A1B0F-B507-4AFA-A906-61887C7AD0FF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>tttimer</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>定时器代码</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
