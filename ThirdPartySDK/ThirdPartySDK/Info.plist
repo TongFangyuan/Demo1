@@ -28,7 +28,12 @@
 	<array>
 		<string>armv7</string>
 	</array>
-    
+    <!--  支持http访问  -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
     <!--    facebook SDK-->
     <key>CFBundleURLTypes</key> <array> <dict> <key>CFBundleURLSchemes</key> <array> <string>fb359012484787426</string> </array> </dict> </array> <key>FacebookAppID</key> <string>359012484787426</string> <key>FacebookDisplayName</key> <string>登录测试</string>
     <key>LSApplicationQueriesSchemes</key> <array> <string>fbapi</string> <string>fb-messenger-share-api</string> <string>fbauth2</string> <string>fbshareextension</string> </array>

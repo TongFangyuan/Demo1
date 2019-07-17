@@ -13,5 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "TTFacebookTool.h"
+#import "TTTool.h"
 
 #endif /* PrefixHeader_pch */

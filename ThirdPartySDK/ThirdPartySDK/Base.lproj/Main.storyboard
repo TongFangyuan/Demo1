@@ -13,7 +13,7 @@
         <!--第三方集成-->
         <scene sceneID="xHx-AK-ALg">
             <objects>
-                <tableViewController title="第三方集成" id="WLJ-kM-2yX" sceneMemberID="viewController">
+                <tableViewController title="第三方集成" id="WLJ-kM-2yX" customClass="ViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mgR-oF-KLV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,16 +21,19 @@
                         <sections>
                             <tableViewSection id="4mc-0I-nix">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="55" id="Xhy-oe-shh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="55" id="Xhy-oe-shh">
                                         <rect key="frame" x="0.0" y="35" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xhy-oe-shh" id="hre-fK-u1F">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-Ds-MbL" customClass="FBSDKLoginButton">
-                                                    <rect key="frame" x="20" y="16" width="348" height="23"/>
-                                                    <state key="normal" title="Button"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-Ds-MbL">
+                                                    <rect key="frame" x="20" y="16" width="374" height="23"/>
+                                                    <state key="normal" title="facebook"/>
+                                                    <connections>
+                                                        <action selector="clickFacebookBtn:" destination="WLJ-kM-2yX" eventType="touchUpInside" id="x22-Sm-GnB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -51,6 +54,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="6in-Oc-Vw7"/>
                     <connections>
+                        <outlet property="faccbookBtn" destination="SOD-Ds-MbL" id="7vQ-k7-aAf"/>
                         <segue destination="s0f-r1-9M6" kind="show" id="MEl-Jv-saw"/>
                     </connections>
                 </tableViewController>
@@ -61,13 +65,29 @@
         <!--授权信息-->
         <scene sceneID="Dqu-PD-VTa">
             <objects>
-                <viewController title="授权信息" id="s0f-r1-9M6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" title="授权信息" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s0f-r1-9M6" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qev-t0-n4p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgT-zp-iC6">
+                                <rect key="frame" x="40" y="437.5" width="334" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UgT-zp-iC6" firstAttribute="leading" secondItem="9f0-FV-bXh" secondAttribute="leading" constant="40" id="9i4-xL-APQ"/>
+                            <constraint firstItem="UgT-zp-iC6" firstAttribute="centerY" secondItem="Qev-t0-n4p" secondAttribute="centerY" id="QGg-Im-Lht"/>
+                            <constraint firstItem="9f0-FV-bXh" firstAttribute="trailing" secondItem="UgT-zp-iC6" secondAttribute="trailing" constant="40" id="v57-OW-jvO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9f0-FV-bXh"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="UgT-zp-iC6" id="Clj-aD-w2I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsA-3S-n4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
