@@ -57,11 +57,13 @@
 
 - (NSArray <TTFontName> *)getAllThirdFontNames {
     return @[
+             TTFontNameChantalNormal,
              TTFontNameChantalBoldItalic,
              TTFontNameChantalMedium,
              TTFontNameChantalLightItalic,
              TTFontNameFilsonSoftLight,
-             TTFontNameFilsonSoftBook
+             TTFontNameFilsonSoftBook,
+             TTFontNameSFProTextRegular,
              ];
 }
 

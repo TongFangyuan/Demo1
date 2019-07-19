@@ -20,8 +20,10 @@
 		8521D38522E19A1100F635BF /* filsonsoft-book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8521D38222E199BD00F635BF /* filsonsoft-book.otf */; };
 		8521D38622E19A1100F635BF /* filsonsoft-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8521D38322E199BD00F635BF /* filsonsoft-light.otf */; };
 		8521D38722E19A1100F635BF /* Chantal-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8521D37B22E1936700F635BF /* Chantal-medium.ttf */; };
-		8521D38822E19A1100F635BF /* Chantal-lightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8521D37D22E193EE00F635BF /* Chantal-lightItalic.ttf */; };
 		8521D38B22E19B6700F635BF /* UIFont+TTFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521D38A22E19B6700F635BF /* UIFont+TTFont.m */; };
+		8521D38E22E1AEB500F635BF /* CHANTAL.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 8521D38D22E1AEB500F635BF /* CHANTAL.TTF */; };
+		8521D39022E1AF3500F635BF /* Chantal-lightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8521D38F22E1AF3500F635BF /* Chantal-lightItalic.ttf */; };
+		8521D39122E1AF3800F635BF /* sf-pro-text_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8521D38C22E1AE7800F635BF /* sf-pro-text_regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,6 @@
 		8521D36C22E1928A00F635BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8521D37A22E1936700F635BF /* Chantal-boldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chantal-boldItalic.ttf"; sourceTree = "<group>"; };
 		8521D37B22E1936700F635BF /* Chantal-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chantal-medium.ttf"; sourceTree = "<group>"; };
-		8521D37D22E193EE00F635BF /* Chantal-lightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Chantal-lightItalic.ttf"; path = "../../../../CChip/第三方字体/Chantal/Chantal-lightItalic.ttf"; sourceTree = "<group>"; };
 		8521D37E22E1948600F635BF /* TTFontTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTFontTool.h; sourceTree = "<group>"; };
 		8521D37F22E1948600F635BF /* TTFontTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTFontTool.m; sourceTree = "<group>"; };
 		8521D38122E196A200F635BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -68,6 +69,9 @@
 		8521D38322E199BD00F635BF /* filsonsoft-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "filsonsoft-light.otf"; sourceTree = "<group>"; };
 		8521D38922E19B6700F635BF /* UIFont+TTFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+TTFont.h"; sourceTree = "<group>"; };
 		8521D38A22E19B6700F635BF /* UIFont+TTFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TTFont.m"; sourceTree = "<group>"; };
+		8521D38C22E1AE7800F635BF /* sf-pro-text_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-text_regular.ttf"; sourceTree = "<group>"; };
+		8521D38D22E1AEB500F635BF /* CHANTAL.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHANTAL.TTF; sourceTree = "<group>"; };
+		8521D38F22E1AF3500F635BF /* Chantal-lightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Chantal-lightItalic.ttf"; path = "../../../../CChip/第三方字体/Chantal-lightItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,11 +170,13 @@
 		8521D37922E1934500F635BF /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				8521D38C22E1AE7800F635BF /* sf-pro-text_regular.ttf */,
 				8521D38222E199BD00F635BF /* filsonsoft-book.otf */,
 				8521D38322E199BD00F635BF /* filsonsoft-light.otf */,
 				8521D37A22E1936700F635BF /* Chantal-boldItalic.ttf */,
+				8521D38F22E1AF3500F635BF /* Chantal-lightItalic.ttf */,
 				8521D37B22E1936700F635BF /* Chantal-medium.ttf */,
-				8521D37D22E193EE00F635BF /* Chantal-lightItalic.ttf */,
+				8521D38D22E1AEB500F635BF /* CHANTAL.TTF */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -281,9 +287,11 @@
 				8521D38422E19A0200F635BF /* Chantal-boldItalic.ttf in Resources */,
 				8521D35322E1928A00F635BF /* LaunchScreen.storyboard in Resources */,
 				8521D38522E19A1100F635BF /* filsonsoft-book.otf in Resources */,
-				8521D38822E19A1100F635BF /* Chantal-lightItalic.ttf in Resources */,
 				8521D38722E19A1100F635BF /* Chantal-medium.ttf in Resources */,
+				8521D39022E1AF3500F635BF /* Chantal-lightItalic.ttf in Resources */,
 				8521D38622E19A1100F635BF /* filsonsoft-light.otf in Resources */,
+				8521D38E22E1AEB500F635BF /* CHANTAL.TTF in Resources */,
+				8521D39122E1AF3800F635BF /* sf-pro-text_regular.ttf in Resources */,
 				8521D35022E1928A00F635BF /* Assets.xcassets in Resources */,
 				8521D34E22E1928800F635BF /* Main.storyboard in Resources */,
 			);

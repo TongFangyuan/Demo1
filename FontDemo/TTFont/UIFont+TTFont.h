@@ -11,6 +11,7 @@
 typedef NSString * TTFontName;
 
 #pragma mark - Chantal 字体
+extern TTFontName const TTFontNameChantalNormal;
 extern TTFontName const TTFontNameChantalMedium;
 extern TTFontName const TTFontNameChantalBoldItalic;
 extern TTFontName const TTFontNameChantalLightItalic;
@@ -18,6 +19,9 @@ extern TTFontName const TTFontNameChantalLightItalic;
 #pragma mark - Filson Soft 字体
 extern TTFontName const TTFontNameFilsonSoftLight;
 extern TTFontName const TTFontNameFilsonSoftBook;
+
+#pragma mark - SFProText 字体
+extern TTFontName const TTFontNameSFProTextRegular;
 
 NS_ASSUME_NONNULL_BEGIN
 

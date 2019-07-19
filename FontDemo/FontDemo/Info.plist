@@ -28,6 +28,8 @@
 		<string>Chantal-boldItalic.ttf</string>
 		<string>Chantal-medium.ttf</string>
 		<string>Chantal-lightItalic.ttf</string>
+        <string>sf-pro-text_regular.ttf</string>
+        <string>CHANTAL.TTF</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

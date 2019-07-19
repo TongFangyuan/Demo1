@@ -8,12 +8,15 @@
 
 #import "UIFont+TTFont.h"
 
+TTFontName const TTFontNameChantalNormal = @"CHANTAL-Normal";
 TTFontName const TTFontNameChantalMedium = @"ChantalMedium";
 TTFontName const TTFontNameChantalBoldItalic = @"ChantalBoldItalic";
 TTFontName const TTFontNameChantalLightItalic = @"ChantalLightItalic";
 
 TTFontName const TTFontNameFilsonSoftLight = @"FilsonSoft-Light";
 TTFontName const TTFontNameFilsonSoftBook  = @"FilsonSoftBook";
+
+TTFontName const TTFontNameSFProTextRegular = @"SFProText-Regular";
 
 @implementation UIFont (TTFont)
 

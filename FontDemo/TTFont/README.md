@@ -10,6 +10,8 @@
 <string>Chantal-boldItalic.ttf</string>
 <string>Chantal-medium.ttf</string>
 <string>Chantal-lightItalic.ttf</string>
+<string>CHANTAL.TTF</string>
+<string>sf-pro-text_regular.ttf</string>
 </array>
 ```
 ## 使用字体
@@ -18,10 +20,11 @@
 cell.textLabel.font = [UIFont tt_fontWithName:TTFontNameChantalMedium size:35.f];
 ```
 
-## 目前支持的字体
+## 支持的字体
 
 ```
 #pragma mark - Chantal 字体
+extern TTFontName const TTFontNameChantalNormal;
 extern TTFontName const TTFontNameChantalMedium;
 extern TTFontName const TTFontNameChantalBoldItalic;
 extern TTFontName const TTFontNameChantalLightItalic;
@@ -29,4 +32,7 @@ extern TTFontName const TTFontNameChantalLightItalic;
 #pragma mark - Filson Soft 字体
 extern TTFontName const TTFontNameFilsonSoftLight;
 extern TTFontName const TTFontNameFilsonSoftBook;
+
+#pragma mark - SFProText 字体
+extern TTFontName const TTFontNameSFProTextRegular;
 ```
