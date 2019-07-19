@@ -17,6 +17,13 @@
     });
     return instance;
 }
+
+- (instancetype)init {
+    if (self=[super init]) {
+        
+    }
+    return self;
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1F37B3A3-1D37-4BB0-98DB-54539AADE867</string>
