@@ -6,7 +6,7 @@
 	<string>ttttabdmk</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#pragma mark - tableView 代理
@@ -57,7 +57,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B34928C0-FD2A-40A3-AE85-2C11F002D6FF</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>ttttabdmk</string>
 	<key>IDECodeSnippetTitle</key>

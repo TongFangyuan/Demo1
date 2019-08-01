@@ -3,41 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttdanli</string>
+	<string>ttleizhushi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (nonnull instancetype)share&lt;#Name#&gt; {
-    static dispatch_once_t once;
-    static id instance;
-    dispatch_once(&amp;once, ^{
-        instance = [self new];
-    });
-    return instance;
-}
-
-- (instancetype)init {
-    if (self=[super init]) {
-        
-    }
-    return self;
-}
-</string>
+	<string>/**
+ * &lt;#Summary#&gt;
+ *
+ * &lt;#Discussion#&gt;
+ *
+ * @note &lt;#note#&gt;
+ * @attention &lt;#attention#&gt;
+ */</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>1F37B3A3-1D37-4BB0-98DB-54539AADE867</string>
+	<string>BC3E30BB-4816-4121-9C7F-20CDB0FD6692</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttdanli</string>
+	<string>ttleizhushi</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>单例方法</string>
+	<string>类注释</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
