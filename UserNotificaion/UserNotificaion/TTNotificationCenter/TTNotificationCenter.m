@@ -49,6 +49,7 @@ UNUserNotificationCenterDelegate
 }
 
 - (void)addNotificationWithTitle:(NSString *)title
+                        subtitle:(NSString *)subtitle
                             body:(NSString *)body
                     timeInterval:(NSTimeInterval)timeInterval
                          repeats:(BOOL) repeats {
@@ -56,6 +57,7 @@ UNUserNotificationCenterDelegate
     /// Configure the notification's payload.
     UNMutableNotificationContent *content = [UNMutableNotificationContent new];
     content.title = title;
+    content.subtitle = subtitle;
     content.body  = body;
     content.sound = [UNNotificationSound defaultSound];
     content.badge = @(0);
@@ -95,21 +97,22 @@ UNUserNotificationCenterDelegate
 /// 仅当应用程序位于前台时，才会调用该方法。
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
     NSLog(@"%@",notification);
-    UNNotificationRequest *request = notification.request;
-    UNNotificationContent *content = request.content;
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:content.title message:content.body preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [[NSNotificationCenter defaultCenter] postNotificationName:TTNotificationNameReceiveData object:notification];
-        [self removeNotificationWithIdentifier:request.identifier];
-    }];
-
-    [alert addAction:action1];
-    [alert addAction:action2];
-    [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+//    UNNotificationRequest *request = notification.request;
+//    UNNotificationContent *content = request.content;
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:content.title message:content.body preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//
+//    }];
+//
+//    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:TTNotificationNameReceiveData object:notification];
+//        [self removeNotificationWithIdentifier:request.identifier];
+//    }];
+//
+//    [alert addAction:action1];
+//    [alert addAction:action2];
+//    [UIApplication.sharedApplication.keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 /// 当用户通过打开应用程序，解除通知或选择UNNotificationAction来响应通知时，将在代理上调用该方法。
