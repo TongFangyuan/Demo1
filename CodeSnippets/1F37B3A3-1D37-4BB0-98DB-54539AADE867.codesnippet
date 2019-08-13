@@ -9,22 +9,36 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>+ (nonnull instancetype)share&lt;#Name#&gt; {
+	<string>#pragma mark - 单例
+static id _shareInstance;
+
++ (instancetype)share&lt;#Manager#&gt; {
     static dispatch_once_t once;
-    static id instance;
     dispatch_once(&amp;once, ^{
-        instance = [self new];
+        _shareInstance = [self new];
     });
-    return instance;
+    return _shareInstance;
 }
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone{
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        _shareInstance = [super allocWithZone:zone];
+    });
+    return _shareInstance;
+}
+
+- (id)copyWithZone:(NSZone *)zone{
+    return _shareInstance;
+}
+
 
 - (instancetype)init {
     if (self=[super init]) {
         
     }
     return self;
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1F37B3A3-1D37-4BB0-98DB-54539AADE867</string>
 	<key>IDECodeSnippetLanguage</key>
