@@ -18,14 +18,15 @@ extern TTNotificationName const TTNotificationNameReceiveData;
  
  @Note 只支持iOS10以上
  */
+NS_AVAILABLE_IOS(10_0)
 @interface TTNotificationCenter : NSObject
 
-+ (nonnull instancetype)shareCenter;
++ (nonnull instancetype)shareCenter NS_AVAILABLE_IOS(10_0);
 
 /**
  请求通知权限，包含提醒、声音和图标标记。
  */
-- (void)requestAuth:(void(^)(BOOL granted))block;
+- (void)requestAuth:(void(^)(BOOL granted))block NS_AVAILABLE_IOS(10_0);
 
 
 /**
@@ -41,7 +42,7 @@ extern TTNotificationName const TTNotificationNameReceiveData;
                         subtitle:(NSString *)subtitle
                             body:(NSString *)body
                     timeInterval:(NSTimeInterval)timeInterval
-                         repeats:(BOOL) repeats;
+                         repeats:(BOOL) repeats NS_AVAILABLE_IOS(10_0);
 
 @end
 
