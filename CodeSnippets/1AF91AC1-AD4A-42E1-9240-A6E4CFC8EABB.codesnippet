@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttfeiqiapi</string>
+	<string>tttqyzs</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DEPRECATED_MSG_ATTRIBUTE("提示使用&lt;#new#&gt;方法代替")</string>
+	<string>// -------------------------------- &lt;#String#&gt;  --------------------------------
+
+// -------------------------------- &lt;#String#&gt;  --------------------------------</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E89EDF47-284F-41CC-B522-B907CAD61925</string>
+	<string>1AF91AC1-AD4A-42E1-9240-A6E4CFC8EABB</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttfeiqiapi</string>
+	<string>tttqyzs</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>api弃用宏</string>
+	<string>区域注释</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

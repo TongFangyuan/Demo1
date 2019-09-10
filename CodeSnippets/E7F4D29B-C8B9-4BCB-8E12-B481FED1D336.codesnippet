@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttfeiqiapi</string>
+	<string>tttmark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DEPRECATED_MSG_ATTRIBUTE("提示使用&lt;#new#&gt;方法代替")</string>
+	<string>#pragma mark - ------------- &lt;#播放器工具类协议#&gt; ------------------</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E89EDF47-284F-41CC-B522-B907CAD61925</string>
+	<string>E7F4D29B-C8B9-4BCB-8E12-B481FED1D336</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttfeiqiapi</string>
+	<string>tttmark</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>api弃用宏</string>
+	<string>mark</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

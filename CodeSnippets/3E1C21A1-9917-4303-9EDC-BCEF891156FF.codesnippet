@@ -3,23 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttfeiqiapi</string>
+	<string>tttunwind</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DEPRECATED_MSG_ATTRIBUTE("提示使用&lt;#new#&gt;方法代替")</string>
+	<string>- (IBAction)unwindTo&lt;#ViewController#&gt;:(UIStoryboardSegue *)segue {
+    
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E89EDF47-284F-41CC-B522-B907CAD61925</string>
+	<string>3E1C21A1-9917-4303-9EDC-BCEF891156FF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttfeiqiapi</string>
+	<string>tttunwind</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>api弃用宏</string>
+	<string>unwind</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

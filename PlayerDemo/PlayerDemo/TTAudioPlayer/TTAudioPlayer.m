@@ -295,6 +295,7 @@ static void* playerItemContext = &playerItemContext;
     if ([notification.userInfo count] == 0) {
         return;
     }
+    NSLog(@"音频焦点中断通知：%@",notification.userInfo);
     if (AVAudioSessionInterruptionTypeBegan == [notification.userInfo[AVAudioSessionInterruptionTypeKey] intValue]) {
         NSLog(@"中断，暂停音乐");
         [self pause];

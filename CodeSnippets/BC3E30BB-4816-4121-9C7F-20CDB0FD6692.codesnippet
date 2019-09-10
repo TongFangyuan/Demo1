@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ttleizhushi</string>
+	<string>tttleizhushi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -24,7 +24,7 @@
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>ttleizhushi</string>
+	<string>tttleizhushi</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>类注释</string>
 	<key>IDECodeSnippetUserSnippet</key>
