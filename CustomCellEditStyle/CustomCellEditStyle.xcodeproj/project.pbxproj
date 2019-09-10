@@ -13,6 +13,8 @@
 		85A6558E23274C030056E1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A6558D23274C030056E1C2 /* Assets.xcassets */; };
 		85A6559123274C030056E1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A6558F23274C030056E1C2 /* LaunchScreen.storyboard */; };
 		85A6559423274C030056E1C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A6559323274C030056E1C2 /* main.m */; };
+		85A655A923279C840056E1C2 /* UITableView+TTEditStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A655A423279C840056E1C2 /* UITableView+TTEditStyle.m */; };
+		85A655AA23279C840056E1C2 /* UITableViewCell+TTEditStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A655A823279C840056E1C2 /* UITableViewCell+TTEditStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		85A6559023274C030056E1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85A6559223274C030056E1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85A6559323274C030056E1C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85A655A423279C840056E1C2 /* UITableView+TTEditStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+TTEditStyle.m"; sourceTree = "<group>"; };
+		85A655A523279C840056E1C2 /* UITableView+TTEditStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+TTEditStyle.h"; sourceTree = "<group>"; };
+		85A655A723279C840056E1C2 /* UITableViewCell+TTEditStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TTEditStyle.h"; sourceTree = "<group>"; };
+		85A655A823279C840056E1C2 /* UITableViewCell+TTEditStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TTEditStyle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		85A6558323274C010056E1C2 /* CustomCellEditStyle */ = {
 			isa = PBXGroup;
 			children = (
+				85A655A223279C770056E1C2 /* Vendor */,
 				85A6558423274C010056E1C2 /* AppDelegate.h */,
 				85A6558523274C010056E1C2 /* AppDelegate.m */,
 				85A6558723274C010056E1C2 /* ViewController.h */,
@@ -69,6 +76,33 @@
 				85A6559323274C030056E1C2 /* main.m */,
 			);
 			path = CustomCellEditStyle;
+			sourceTree = "<group>";
+		};
+		85A655A223279C770056E1C2 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				85A655A323279C840056E1C2 /* UITableView */,
+				85A655A623279C840056E1C2 /* UITableViewCell */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		85A655A323279C840056E1C2 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				85A655A423279C840056E1C2 /* UITableView+TTEditStyle.m */,
+				85A655A523279C840056E1C2 /* UITableView+TTEditStyle.h */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		85A655A623279C840056E1C2 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				85A655A723279C840056E1C2 /* UITableViewCell+TTEditStyle.h */,
+				85A655A823279C840056E1C2 /* UITableViewCell+TTEditStyle.m */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +178,8 @@
 				85A6558923274C010056E1C2 /* ViewController.m in Sources */,
 				85A6559423274C030056E1C2 /* main.m in Sources */,
 				85A6558623274C010056E1C2 /* AppDelegate.m in Sources */,
+				85A655AA23279C840056E1C2 /* UITableViewCell+TTEditStyle.m in Sources */,
+				85A655A923279C840056E1C2 /* UITableView+TTEditStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
