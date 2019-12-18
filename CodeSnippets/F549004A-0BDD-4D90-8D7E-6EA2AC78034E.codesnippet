@@ -9,15 +9,15 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/** &lt;#name#&gt; */</string>
+	<string>/* &lt;#注释#&gt; */</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>24A3BCD2-FD3C-45C2-A8E7-0EDE1E25D6C5</string>
+	<string>F549004A-0BDD-4D90-8D7E-6EA2AC78034E</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttdhzs</string>
+	<string>tttdnzs</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>单行注释: /** 文字 */</string>
+	<string>单行注释2 /* code*/</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
