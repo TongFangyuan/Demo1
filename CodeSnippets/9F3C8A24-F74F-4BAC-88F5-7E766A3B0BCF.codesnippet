@@ -3,25 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tttunwind</string>
+	<string>tttkzqui</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
+		<string>All</string>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (IBAction)unwindTo&lt;#ViewController#&gt;:(UIStoryboardSegue *)segue {
-    
-}</string>
+	<string>#pragma mark - 控制器UI
+- (void)setupUI {
+
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3E1C21A1-9917-4303-9EDC-BCEF891156FF</string>
+	<string>9F3C8A24-F74F-4BAC-88F5-7E766A3B0BCF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>tttunwind</string>
+	<string>tttkzqui</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>unwind - sb控制回退</string>
+	<string>tttkzqui -  控制器UI</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

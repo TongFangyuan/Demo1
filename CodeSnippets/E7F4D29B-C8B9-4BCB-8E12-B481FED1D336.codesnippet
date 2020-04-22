@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark - ------------- &lt;#播放器工具类协议#&gt; ------------------</string>
+	<string>#pragma mark - ---- &lt;#desc#&gt; ----</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E7F4D29B-C8B9-4BCB-8E12-B481FED1D336</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>tttmark</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>mark</string>
+	<string>分块标注</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
